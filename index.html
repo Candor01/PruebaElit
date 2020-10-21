@@ -1,4 +1,70 @@
-index html
-<<<<<<< HEAD
-hola
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <title>Ghibli App</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet" />
+   
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <img src="">>
+    <button onclick="">Try It</button>
+    <!--<script src="scripts.js"></script>-->
+    <script>
+      const apikey='fc5a0196234f38d93f6ad2885261e5fb';
+      const url_base='https://api.themoviedb.org/3/';
+      const nombre_pelicula='Kung Fu Panda 3';
+      const busqueda_peliculas='search/movie?api_key=';
+      const pelicula=url_base+busqueda_peliculas+apikey+'&query='+nombre_pelicula;
+     // var request = new XMLHttpRequest();
+//request.open('GET', pelicula, true);
+Id(pelicula);
+     
+    //console.log(id_1);
+
+       /* request.onload = function () {
+  // Begin accessing JSON data here
+var data = JSON.parse(this.response)
+  if (request.status >= 200 && request.status < 400) {
+    data.forEach((movie) => {
+      const card = document.createElement('div')
+      card.setAttribute('class', 'card')
+
+      const h1 = document.createElement('h1')
+      h1.textContent = movie.title
+
+      const p = document.createElement('p')
+      movie.description = movie.description.substring(0, 300)
+      p.textContent = `${movie.description}...`
+
+      container.appendChild(card)
+      card.appendChild(h1)
+      card.appendChild(p)
+    })
+  }*/
+  function Id(movies){
+    /*movies = JSON.parse(this.response);
+    const id=movies.results[0].id;*/
+    var id_2;
+ fetch (movies)
+ .then((res)=>res.json())
+ . then((data)=>{
+    console.log('Data',data);
+    id_2=data.results[1].id;
+    console.log(id_2);
+ })
+.catch((error)=>{
+  console.log('Error:',error);
+});
+
+    //return id_2;
+  }
+    </script>
+  
+  </body>
+</html>
